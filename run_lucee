@@ -50,7 +50,7 @@ def main():
             content = urllib.request.urlopen(url).read().decode("utf-8")
             match = re.search(r"<pre>(.*)</pre>", content, flags=re.DOTALL)
             if match:
-                print(html.unescape(match.group(1)), end="")
+                print(html.unescape(match.group(1).replace("<br>", "\n")), end="")
                 exc = None
                 break
         except IOError as e:

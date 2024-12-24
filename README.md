@@ -32,4 +32,5 @@ following parameters:
 
 The Lucee program is expected to output text wrapped in a `<pre>` tag. For example,
 the [Hello World](hello_world.cfm) outputs `<pre>Hello, world!</pre>`, and the
-request is `http://localhost:8888/hello_world.cfm?argc=0`.
+request is `http://localhost:8888/hello_world.cfm?argc=0`. The `<br>` tag is
+automatically converted to a newline.
